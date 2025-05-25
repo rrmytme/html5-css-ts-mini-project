@@ -1,5 +1,5 @@
 function showCourses(){
-    fetch("http://localhost:8080/courses") //API End point
+    fetch("http://localhost:8080/public/courses") //API End point
     .then((response) => response.json())
     .then((courses) => {
         const dataTable = document.getElementById("coursetable")
@@ -18,7 +18,7 @@ function showCourses(){
 }
 
 function showEnrolledStudents(){
-    fetch("http://localhost:8080/courses/enrolled") //API End point
+    fetch("http://localhost:8080/admin/courses/enrolled") //API End point
     .then((response) => response.json()) //Http response into json object
     .then((students) => {
         const dataTable = document.getElementById("enrolledtable")
